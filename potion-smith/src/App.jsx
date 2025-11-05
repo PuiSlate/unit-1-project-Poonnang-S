@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import AgeGate from './components/forms/AgeGate'
 
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
 
   return (
     <>
-      
+       
     </>
   )
 }
