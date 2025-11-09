@@ -1,0 +1,21 @@
+/* #email-icon-container {
+    grid-area: email;
+}
+#facebook-icon-container {
+    grid-area: facebook;
+}
+#instagram-icon-container {
+    grid-area: instagram;
+} */
+
+#contact-icons {
+    display: grid;
+    justify-items: left;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-template-areas:
+        'email'
+        'facebook'
+        'instagram';
+    column-gap: 30px;
+}

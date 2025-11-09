@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import Header from './components/Layout/Header'
-import Footer from './components/Layout/Footer'
+import SubscribePage from './components/pages/SubscribePage'
 
 
 
@@ -9,9 +8,8 @@ function App() {
 
   return (
     <>
-      <Header />
-      <Footer />
-     
+      <SubscribePage />
+
     </>
   )
 }
