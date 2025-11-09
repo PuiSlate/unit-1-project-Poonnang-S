@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import SubscribePage from './components/pages/SubscribePage'
+
 
 
 function App() {
@@ -6,7 +8,8 @@ function App() {
 
   return (
     <>
-      
+      <SubscribePage />
+
     </>
   )
 }
