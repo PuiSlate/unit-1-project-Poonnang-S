@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import SubscribePage from './components/pages/SubscribePage'
+import HomePage from './components/pages/HomePage'
 
 
 
@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <SubscribePage />
+      <HomePage />
 
     </>
   )

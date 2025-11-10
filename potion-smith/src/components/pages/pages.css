@@ -1,3 +1,20 @@
+.homepage-carousel {
+    text-align: center;
+}
+
+.homepage-carousel img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  margin: 12px;
+  transition: transform 0.2s ease;
+}
+
+.homepage-carousel img:hover {
+   transform: scale(1.03);
+}
+
+
 /* #email-icon-container {
     grid-area: email;
 }
@@ -8,7 +25,7 @@
     grid-area: instagram;
 } */
 
-#contact-icons {
+/* #contact-icons {
     display: grid;
     justify-items: left;
     grid-template-rows: auto;
@@ -18,4 +35,4 @@
         'facebook'
         'instagram';
     column-gap: 30px;
-}
+} */
