@@ -4,12 +4,36 @@ const ContactPage = () => {
             <div className="main-content">
             <h1>Contact Us</h1>
             <p>
-             Have a question, request, or potion idea to share? You can reach us at contact@potionsmith.com
-             The Potion Smith team welcomes messages from adventurers of all levels. Whether you’ve discovered a new ingredient,
-             have feedback, or wish to collaborate, we are here to help. Send a raven via email, reach out through our 
-             social channels, or leave a message at our virtual tavern counter. We review all inquiries and will respond
-             as promptly as our alchemists can return from their latest quest.
+             Have a question, request, or a potion idea to share? You can reach us at 
+            <strong> contact@potionsmith.com</strong>. The Potion Smith team welcomes 
+             messages from adventurers of all levels. Whether you've discovered a rare 
+            ingredient, have feedback to enhance our brews, or wish to collaborate, 
+            we’re here to help.
             </p>
+
+            <p>
+             Send a raven by email, connect through our social channels, or leave a note 
+             at our virtual tavern counter. Every message is reviewed, and we’ll reply 
+             as swiftly as our alchemists return from their latest quest.   
+            </p>
+            </div>
+
+
+             <div className="main-content">
+            <h1>Follow Us on Social Media</h1>
+            <h2>Infusions of daily inspiration and recipe ideas, delivered straight to your feed.</h2>
+            </div>
+            
+            <div id="contact-icons">
+            <IconWithLabel id="email" classes="fa-solid fa-square-envelope">
+                    contact@potionsmith.com
+                </IconWithLabel>
+                <IconWithLabel id="facebook" classes="fa-brands fa-square-facebook">
+                    PotionSmith
+                </IconWithLabel>
+                <IconWithLabel id="instagram" classes="fa-brands fa-square-instagram">
+                    @PotionSmith
+                </IconWithLabel>
             </div>
         </main>
     )
