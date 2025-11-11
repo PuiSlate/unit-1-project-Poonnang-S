@@ -9,7 +9,7 @@ const HomePage = () => {
             </a>
             <a href="https://www.potionsmith.com/recipes/hellfire-margarita"><img
             src="https://drive.google.com/file/d/1HvRa3OH82FFsRxaI3rZzACchQbdfbx7f/view?usp=drive_link"
-            alt="HellFire Margarita"></img>
+            alt="The HellFire Draught Margarita"></img>
             </a>
             <a href="https://www.potionsmith.com/recipes/bard-song-of-rest"><img
             src="https://drive.google.com/file/d/11T52tbfSaBldybMSczVbVQMwk2fZX-Gh/view?usp=drive_link"
