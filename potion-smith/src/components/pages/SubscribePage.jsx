@@ -6,26 +6,26 @@ const SubscribePage = () => {
             <h2>Receive free weekly recipes & inspiration in your inbox!</h2>
             </div>
 
-            {/* <div className="subsribe-form"> */}
- {/* Create a subscribtion form here */}
-            {/* </div> */}
+            <form>
+                <div className="container">
+                <label className="sr-only" htmlFor="name">Name</label>
+                <input type="text" placeholder="Name" name="name" required></input>
 
-           
-            <div className="main-content">
-            <h1>Follow Us on Social Media</h1>
-            <h2>Daily inspiration and meal planning ideas, right in the palm of your hand.</h2>
-            </div>
-            
-            <div id="contact-icons">
-            <IconWithLabel id="email" classes="fa-solid fa-square-envelope">
-                    contact@potionsmith.com
-                </IconWithLabel>
-                <IconWithLabel id="facebook" classes="fa-brands fa-square-facebook">
-                    PotionSmith
-                </IconWithLabel>
-                <IconWithLabel id="instagram" classes="fa-brands fa-square-instagram"></IconWithLabel>
-            </div>
-        </main>    
+                <label className="sr-only" htmlFor="email">Email address</label>
+                <input type="text" placeholder="Email address" name="email" required></input>
+                
+                <label className="checkbox-label">
+                    <input type="checkbox" name="subscribe" defaultChecked/>Weekly Newsletter</label>
+                </div>
+
+    
+                <div className="container">
+                    <input type="submit" value="Subscribe"></input>
+                </div>
+            </form>
+
+        </main>
+        
     )
 }
 
