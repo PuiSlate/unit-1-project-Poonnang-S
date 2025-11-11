@@ -8,8 +8,8 @@ const HomePage = () => {
             alt="Ranger's Feral Senses"></img>
             </a>
             <a href="https://www.potionsmith.com/recipes/hellfire-margarita"><img
-            src="https://drive.google.com/uc?export=view&id=1HvRa3OH82FFsRxaI3rZzACchQbdfbx7f"
-            alt="HellFire Margarita"></img>
+            src="https://drive.google.com/file/d/1HvRa3OH82FFsRxaI3rZzACchQbdfbx7f/view?usp=drive_link"
+            alt="The HellFire Draught Margarita"></img>
             </a>
             <a href="https://www.potionsmith.com/recipes/bard-song-of-rest"><img
             src="https://drive.google.com/uc?export=view&id=11T52tbfSaBldybMSczVbVQMwk2fZX-Gh"
