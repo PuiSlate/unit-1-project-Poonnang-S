@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Smythe&display=swap');
+
+header {
+  background-color: #630111;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* spread left–right */
+  padding: 0.8rem 2rem;
+}
+
+/* make everything inside line up nicely */
+#ps {
+  font-family: "Smythe", system-ui;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-right: 2rem;
+  flex: 1; /* takes left space */
+}
+
+/* main nav container */
+.navbar {
+  flex: 3; /* center content gets more width */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* center the links */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #ffb3b3;
+}
+
+/* search bar to the far right */
+.navbar-search {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.search-input {
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+}
+
+.search-button {
+  background: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0.4rem 0.6rem;
+  transition: background 0.3s ease;
+}
+
+.search-button:hover {
+  background: #ffb3b3;
+}

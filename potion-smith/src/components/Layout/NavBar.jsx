@@ -1,43 +1,36 @@
+import { useState } from "react";
+
 const NavBar = () => {
-    return (
-       <nav className = "navbar">
-           <div className="navbar-left">
-                <a href="/" className="logo">Potion Smith</a>
-            </div>
+  const [searchQuery, setSearchQuery] = useState("");
 
-            {/* Nav links */}
-            <div className="navbar-cener">
-               <ul className="navbar-links">
+  const handleSearch = (e) => {
+    e.preventDefault();
+    console.log("Searching for:", searchQuery);
+  };
 
-                <li>
-                    <a href="/recipes">Recipes</a>
-                </li>
-                <li>
-                    <a href="/about">About</a>
-                </li>
-                <li>
-                    <a href="/contact">Contact</a>"
-                </li>
-                <li>
-                    <a href="/subscribe">Subscribe</a>"
-                </li>
-                </ul> 
-            {/* Search Input */}
-                <form className="navbar-search" onSubmit={handleSearch}>
-                  <input
-                    type="text"
-                    placeholder="Search recipes…"
-                    value={searchQuery}
-                    onChange={e => setSearchQuery(e.target.value)}
-                    className="search-input" />
-                 <button type="submit" className="search-button" aria-label="Search">🔍</button>   
-                 </form>   
-            </div>                
-                                                    
-                            
-        </nav>
-      
-    )
-}
+  return (
+    <div className="navbar">
+      <ul className="navbar-links">
+        <li><a href="/recipes">Recipes</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/subscribe">Subscribe</a></li>
+      </ul>
+
+      <form className="navbar-search" onSubmit={handleSearch}>
+        <input
+          type="text"
+          placeholder="Search recipes…"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          className="search-input"
+        />
+        <button type="submit" className="search-button" aria-label="Search">
+          🔍
+        </button>
+      </form>
+    </div>
+  );
+};
 
 export default NavBar;

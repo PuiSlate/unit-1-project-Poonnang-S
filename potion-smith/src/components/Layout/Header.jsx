@@ -1,10 +1,12 @@
-
+import NavBar from "./NavBar";
 const Header = () => {
     return (
         <header>
-            <div>
-                Potion Smith
+            <div id="ps">
+                <strong>Potion Smith</strong>
             </div>
+            <NavBar />
+            
         </header>
     )
 }
