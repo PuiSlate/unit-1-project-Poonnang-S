@@ -1,0 +1,32 @@
+.age-gate {
+  text-align: center;
+  padding: 2rem;
+  font-family: "Smythe", system-ui;
+  background-color: #630111;
+  color: white;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: 5rem auto;
+}
+
+.age-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.age-buttons button {
+  background-color: white;
+  color: #630111;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.age-buttons button:hover {
+  background-color: #ffb3b3;
+}
