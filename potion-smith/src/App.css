@@ -1,0 +1,15 @@
+.footer {
+  background-color: #630111;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  font-family: "Smythe", system-ui;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin-top: 2rem;
+  border-top: 2px solid #4a000d; /* subtle top border for depth */
+}
+
+.footer div {
+  opacity: 0.9;
+}
