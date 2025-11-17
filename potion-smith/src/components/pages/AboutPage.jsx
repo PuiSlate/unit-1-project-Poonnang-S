@@ -1,3 +1,5 @@
+
+
 const AboutPage = () => {
     return (
         <main>
@@ -12,6 +14,7 @@ const AboutPage = () => {
             art of potioncraft begins here.
             </p>
             </div>
+            <img src="/images/whisky-8443152_1280.jpg" width="100%" alt="Potion Smith About" />
         </main>
     )
 }

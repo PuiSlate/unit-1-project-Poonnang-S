@@ -1,5 +1,3 @@
-
-
 const HomePage = () => {
     return(
     <main>
@@ -8,21 +6,21 @@ const HomePage = () => {
 
         <a href="https://www.potionsmith.com/recipes/rangers-feral-senses">
           <img
-            src="/images/RangersFeralSenses.jpeg"
+            src="assets/images/rangers-feral-senses.jpeg"
             alt="Ranger's Feral Senses"
           />
         </a>
 
         <a href="https://www.potionsmith.com/recipes/hellfire-margarita">
           <img
-            src="/images/HellfireDraughtMargarita.png"
+            src="assets/images/hellfire-draught-margarita.png"
             alt="The HellFire Draught Margarita"
           />
         </a>
 
         <a href="https://www.potionsmith.com/recipes/bard-song-of-rest">
           <img
-            src="/images/BardSongofRest.jpeg"
+            src="assets/images/bard-song-of-rest.jpg"
             alt="Bard's Song of Rest"
           />
         </a>

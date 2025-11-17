@@ -18,7 +18,7 @@ export const mockRecipes = [
             "Garnish with a lemon peel and serve."
         ],
         category: "Gin",
-        imageID: ""
+        imageID: "klauths-spell.png"
     
     },
     {
@@ -40,7 +40,7 @@ export const mockRecipes = [
             "Garnish with a lemon peel carved into the image of a quarter note and serve."
         ],
         category: "Gin",
-        imageID: ""
+        imageID: "bard-song-of-rest.jpg"
     },
     {
         id: 3,
@@ -61,7 +61,7 @@ export const mockRecipes = [
             "Garnish with a lime wheel and a mint leaf."
         ],
         category: "Tequila",
-        imageID: ""
+        imageID: "barbarians-rage.jpg"
     },
     {
         id: 4,
@@ -83,7 +83,7 @@ export const mockRecipes = [
             "Garnish with a wheel of blood orange, and serve."
         ],
         category: "Tequila",
-        imageID: ""
+        imageID: "hellfire-draught-margarita.png"
     },
     {
         id: 5,
@@ -107,7 +107,7 @@ export const mockRecipes = [
             "Garnish with a torched rosemary sprig."
         ],
         category: "Rum",
-        imageID: ""
+        imageID: "the-luskan-pirates-pine.jpg"
     },
     {
         id: 6,
@@ -128,7 +128,7 @@ export const mockRecipes = [
             "Garnish with a smoked cinnamon stick and serve."
         ],
         category: "Rum",
-        imageID: ""
+        imageID: "the-balders-gate-gourd.png"
     },
     {
         id: 7,
@@ -148,7 +148,7 @@ export const mockRecipes = [
             "Top with soda for a striped look."
         ],
         category: "Vodka",
-        imageID: ""
+        imageID: "never-winter-goblin-grog.png"
     },
     {
         id: 8,
@@ -168,7 +168,7 @@ export const mockRecipes = [
             "Garnish by sprinkling dried rose petals over the top of the drink."
         ],
         category: "Vodka",
-        imageID: ""
+        imageID: "rangers-feral-senses.jpeg"
     },
     {
         id: 9,
@@ -188,7 +188,7 @@ export const mockRecipes = [
             "Garnish with a mint sprig and fresh blueberries"
         ],
         category: "Mocktail",
-        imageID: ""
+        imageID: "misty-forest-fizz.png"
     },
     {
         id: 10,
@@ -209,7 +209,7 @@ export const mockRecipes = [
             "Garnish with a lemon wheel and rosemary sprig, and serve."
         ],
         category: "Mocktail",
-        imageID: ""
+        imageID: "the-high-forest-fey-elixir.png"
     }
 
 ]
