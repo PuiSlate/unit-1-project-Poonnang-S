@@ -1,21 +1,58 @@
-
+/* -------------------------------
+   Homepage Carousel
+---------------------------------*/
 .homepage-carousel {
-    text-align: center;
     display: flex;
     gap: 1rem;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    padding: 1rem 0;
+    scroll-behavior: smooth;   /* smooth scrolling on swipe */
+}
+
+/* Hide default scrollbar for a cleaner look */
+.homepage-carousel::-webkit-scrollbar {
+    display: none;
 }
 
 .homepage-carousel img {
-  width: 300px;
-  border-radius: 1rem;
-  scroll-snap-align: center;
-  transition: transform 0.3s;
+    width: 300px;               /* base width for desktop */
+    max-width: 90vw;            /* responsive on small screens */
+    border-radius: 1rem;
+    scroll-snap-align: center;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;             /* prevent shrinking in flex container */
 }
 
+/* Hover effect */
 .homepage-carousel img:hover {
-   transform: scale(1.03);
+    transform: scale(1.03);
+}
+
+/* -------------------------------
+   Responsive Adjustments
+---------------------------------*/
+@media (max-width: 1024px) {
+    .homepage-carousel img {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .homepage-carousel {
+        gap: 0.8rem;
+        padding: 0.5rem 0;
+    }
+
+    .homepage-carousel img {
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .homepage-carousel img {
+        width: 150px;
+    }
 }
 
 
