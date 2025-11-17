@@ -10,6 +10,9 @@ const NavBar = () => {
 
   return (
     <div className="navbar">
+       <div className="logo">
+        <a href="/">Potion Smith</a>
+         </div>
       <ul className="navbar-links">
         <li><a href="/recipes">Recipes</a></li>
         <li><a href="/about">About</a></li>

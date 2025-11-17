@@ -6,7 +6,7 @@ const RecipeCard = ({ recipe }) => {
         <Card clickable={true}>
             <img
                 className="recipe-card-image"
-                src={recipe.getImageURL() || "/images/fallback.jpg"}
+                src={recipe.imageID ? `/images/${recipe.imageID}` : "/images/fallback.jpg"}
                 alt={`Image of ${recipe.name}`}
             />
 
