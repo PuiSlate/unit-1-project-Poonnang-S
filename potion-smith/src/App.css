@@ -1,5 +1,27 @@
-footer {
+@import url('https://fonts.googleapis.com/css2?family=Smythe&display=swap');
+
+body {
+    background-color: white;
+    color: #1e323c;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    min-height: 100vh;
+    margin: 100;
+    padding: 100;
+    overflow-x: hidden;
+}
+
+header {
+  background-color: #630111;
+  color: white;
   display: flex;
+  align-items: center;
+  justify-content: space-between; /* spread left–right */
+  padding: 0.8rem 2rem;
+}
+
+footer {
+
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   background-color: #630111;
   color: white;
   text-align: center;
@@ -13,4 +35,23 @@ footer {
 
 footer div {
   opacity: 0.9;
+}
+
+h1 {
+    color: black;
+    text-align: left;
+    font-family: "Smythe", system-ui;
+    text-transform: uppercase;
+    font-size: 6 rem;
+    font-weight: 900;
+
+}
+
+p {
+    margin: 6px 0;
+
+}
+
+strong {
+    font-weight: 700;
 }

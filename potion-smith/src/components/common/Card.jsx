@@ -1,5 +1,12 @@
-const Card = ({ children, clickable }) => {
-    return <div className={`card ${clickable && 'clickable-card'}`}>{children}</div>;
+const Card = ({ children, clickable, ...props }) => {
+    return (
+        <div
+            className={`card ${clickable ? 'clickable-card' : ''}`}
+            {...props}
+        >
+            {children}
+        </div>
+    );
 };
 
 export default Card;

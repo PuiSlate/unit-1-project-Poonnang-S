@@ -1,13 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Smythe&display=swap');
 
-header {
-  background-color: #630111;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* spread left–right */
-  padding: 0.8rem 2rem;
-}
+
 
 /* make everything inside line up nicely */
 #ps {
@@ -30,6 +23,7 @@ header {
 /* center the links */
 .navbar-links {
   list-style: none;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   display: flex;
   gap: 2rem;
   justify-content: center;
@@ -44,6 +38,7 @@ header {
   font-weight: bold;
   transition: color 0.3s ease;
 }
+
 
 .navbar-links a:hover {
   color: #ffb3b3;
