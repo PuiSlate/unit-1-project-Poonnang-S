@@ -10,13 +10,24 @@
     scroll-behavior: smooth;   /* smooth scrolling on swipe */
 }
 
+/* Make each slide “lock” into place */
+.homepage-carousel > * {
+  scroll-snap-align: start;
+}
+
+/* For Centered Look */
+.homepage-carousel {
+  padding: 1rem 1.5rem;
+}
+
+
 /* Hide default scrollbar for a cleaner look */
 .homepage-carousel::-webkit-scrollbar {
     display: none;
 }
 
 .homepage-carousel img {
-    width: 300px;               /* base width for desktop */
+    width: 250px;               /* base width for desktop */
     max-width: 90vw;            /* responsive on small screens */
     border-radius: 1rem;
     scroll-snap-align: center;
@@ -76,4 +87,5 @@
         'facebook'
         'instagram';
     column-gap: 30px;
+    padding: 1rem;
 }

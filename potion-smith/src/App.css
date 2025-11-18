@@ -19,22 +19,26 @@ h1 {
     text-align: left;
     font-family: "Smythe", system-ui;
     text-transform: uppercase;
-    font-size: 6rem;        /* fixed typo: "6 rem" -> "6rem" */
+    font-size: 4rem;        /* fixed typo: "6 rem" -> "6rem" */
     font-weight: 900;
     margin: 1rem 0;
 }
 
 h1,
 h3,
+h2,
 h4,
 h5,
 h6 {
-    margin: 12px 0 0;
+    margin: 6px 0 0;
+    padding: 15px;
 }
 
 p {
+    font-size: 1.2rem;
     margin: 6px 0;
     line-height: 1.6;
+    padding: 15px;
 }
 
 strong {

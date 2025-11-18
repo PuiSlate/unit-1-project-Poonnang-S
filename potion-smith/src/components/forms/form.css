@@ -1,3 +1,4 @@
+/* For AgeGate Form */
 .age-gate {
   text-align: center;
   padding: 2rem;
@@ -31,7 +32,7 @@
   background-color: #ffb3b3;
 }
 
-/* Container for form sections */
+/* Container for Subscribe Form */
 .container {
   display: flex;
   flex-direction: column;

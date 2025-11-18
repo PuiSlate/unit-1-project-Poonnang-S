@@ -1,12 +1,16 @@
 import Spacer from "../../common/spacer"
 import Card from "../../common/Card"
+import { recipeImages } from "../../../assets/images/images"
 
 const RecipeCard = ({ recipe }) => {
+   
+
     return (
+    
         <Card clickable={true}>
             <img
                 className="recipe-card-image"
-                src={recipe.imageID ? `/images/${recipe.imageID}` : "/images/fallback.jpg"}
+                src={recipe.imageID ? recipeImages[recipe.imageID] : recipeImages["fallback.jpg"]}
                 alt={`Image of ${recipe.name}`}
             />
 
