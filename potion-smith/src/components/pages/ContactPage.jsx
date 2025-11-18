@@ -1,3 +1,5 @@
+import IconWithLabel from "../common/IconwithLabel";
+
 const ContactPage = () => {
     return (
         <main>
