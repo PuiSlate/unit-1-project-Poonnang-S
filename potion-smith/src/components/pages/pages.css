@@ -56,7 +56,7 @@
 }
 
 
-/* #email-icon-container {
+#email-icon-container {
     grid-area: email;
 }
 #facebook-icon-container {
@@ -64,9 +64,9 @@
 }
 #instagram-icon-container {
     grid-area: instagram;
-} */
+}
 
-/* #contact-icons {
+#contact-icons {
     display: grid;
     justify-items: left;
     grid-template-rows: auto;
@@ -76,4 +76,4 @@
         'facebook'
         'instagram';
     column-gap: 30px;
-} */
+}

@@ -6,8 +6,6 @@ export default class Recipe {
         this.instructions = instructions;
         this.category = category;
         this.imageID = imageID;
-    }
-    getImageURL = () => {
-        return 'https://i.ibb.co/' + this.imageId;
+    
     };
-}
+};
