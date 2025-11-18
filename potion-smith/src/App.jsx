@@ -13,12 +13,12 @@ import ContactPage from './components/pages/ContactPage'
 
 
 function App() {
-  
+  const [searchQuery, setSearchQuery] = useState("");
 
   return (
     <>
    <Header />
-   <AboutPage />
+   <SubscribePage />
    <Footer />
 
     </>

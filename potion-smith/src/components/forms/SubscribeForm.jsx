@@ -8,8 +8,17 @@ const SubscribeForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // handle subscription logic here
+    // basic validation for local logic only
+    if (!name || !email) {
+        alert("Please fill out all fields");
+        return;
+    }
     console.log({ name, email, subscribe });
+    alert("Thank you for your subscription!");
+
+    setName("");
+    setEmail("");
+    setSubscribe(true);
   };
 
   return (
