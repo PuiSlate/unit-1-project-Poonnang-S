@@ -3,6 +3,7 @@ const Card = ({ children, clickable, ...props }) => {
         <div
             className={`card ${clickable ? 'clickable-card' : ''}`}
             {...props}
+            
         >
             {children}
         </div>

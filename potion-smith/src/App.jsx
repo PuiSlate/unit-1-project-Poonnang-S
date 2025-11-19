@@ -18,7 +18,13 @@ function App() {
   return (
     <>
    <Header />
-   <SubscribePage />
+   
+   <main>
+
+    <Route path="/recipes" element={<RecipesPage />} />
+    <Route path="/recipes/:id" element={<RecipeDetailsPage />} />
+
+   </main>
    <Footer />
 
     </>
