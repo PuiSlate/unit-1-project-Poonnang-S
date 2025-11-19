@@ -1,4 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import { mockRecipes } from "../../../test-data/mockRecipe";
 import { recipeImages } from "../../../assets/images/images";
 
@@ -17,9 +18,19 @@ const RecipeDetailsPage = () => {
         );
     }
 
+    // Recipe rating state
+    const [userRating, setUserRating] = useState(recipe.rating || 0); 
+
+    // Save favorite recipe state
+    const [isFavorite, setIsFavorite] = useState(recipe.isFavorite || false);
+
+     const toggleFavorite = () => {
+     setIsFavorite(prev => !prev);
+     };
+
     return (
         <main className="recipe-details-page">
-            <button className="back-button" onClick={() => navigate("/recipes")}>
+            <button className="back-button" onClick={() => navigate("/recipes")}>. 
                 ← Back to All Recipes
             </button>
 
@@ -52,6 +63,37 @@ const RecipeDetailsPage = () => {
                     ))}
                 </ol>
             </section>
+
+            {/* Add recipe rating section where users can rate out of 5 stars  */}
+            <div className="recipe-rating">
+              <h3>Rate this recipe:</h3>
+                 <div className="stars">
+                      {Array.from({ length: maxRating }, (_, i) => {
+                        const starNumber = i + 1;
+                      return (
+                     <span
+                         key={starNumber}
+                         className={`star ${starNumber <= userRating ? "filled" : ""}`}
+                         onClick={() => handleRating(starNumber)}
+                     >
+                     ★
+                    </span>
+            );
+            })}
+
+          </div>
+          {userRating > 0 && <p>You rated this recipe {userRating} out of {maxRating} stars</p>}
+          </div>
+
+          <div className="favorite-section">
+            <button
+            className={`favorite-btn ${isFavorite ? "favorited" : ""}`}
+            onClick={toggleFavorite}
+            >
+            {isFavorite ? "❤️ Favorited" : "🤍 Save Recipe"}
+           </button>
+         </div>
+   
         </main>
     );
 };
