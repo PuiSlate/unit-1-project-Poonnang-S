@@ -1,21 +1,26 @@
-
+import { Link, useNavigate } from "react-router-dom";
 
 const NavBar = ({ searchQuery, setSearchQuery }) => {
+  const navigate = useNavigate();
+
+  // Handle search form submission
   const handleSearch = (e) => {
     e.preventDefault();
+    // Navigate to /recipes with query as URL param
+    navigate(`/recipes?search=${encodeURIComponent(searchQuery)}`);
   };
 
   return (
     <div className="navbar">
       <div className="logo">
-        <a href="/">Potion Smith</a>
+        <Link to="/">Potion Smith</Link>
       </div>
 
       <ul className="navbar-links">
-        <li><a href="/recipes">Recipes</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/subscribe">Subscribe</a></li>
+        <li><Link to="/recipes">Recipes</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
+        <li><Link to="/subscribe">Subscribe</Link></li>
       </ul>
 
       <form className="navbar-search" onSubmit={handleSearch}>
