@@ -4,7 +4,6 @@ import Header from './components/Layout/Header'
 import Footer from './components/Layout/Footer'
 import RecipesPage from './components/pages/Recipes/RecipesPage'
 import RecipeDetailsPage from './components/pages/Recipes/RecipeDetailsPage';
-import NavBar from './components/Layout/NavBar'
 import HomePage from './components/pages/HomePage'
 import AboutPage from './components/pages/AboutPage'
 import SubscribePage from './components/pages/SubscribePage'
@@ -24,12 +23,14 @@ function App() {
         setSearchQuery={setSearchQuery}
    />
    <Routes>
+      <Route path="/" element={<HomePage/>}></Route>
+      <Route path="/" element={<AboutPage/>}></Route>
       <Route path="/recipes" 
       element={<RecipesPage searchQuery={searchQuery}/>} 
-        
       />
     <Route path="/recipes/:id" element={<RecipeDetailsPage />} />
-
+    <Route path="/" element={<ContactPage/>}></Route>
+    <Route path="/" element={<SubscribePage/>}></Route>
    </Routes>
    
    <Footer />
