@@ -67,7 +67,7 @@ export const mockRecipes = [
         id: 4,
         name: "The Hellfire Draught Margarita",
         ingredients: [
-            "1 oz of Del Maquey Vida Mezcal (or other mezcal",
+            "1 oz of Del Maquey Vida Mezcal (or other mezcal)",
             "1 oz cinnamon whiskey",
             "0.5 oz Cointreau oragne liqeur",
             "2 oz blood orange juice",

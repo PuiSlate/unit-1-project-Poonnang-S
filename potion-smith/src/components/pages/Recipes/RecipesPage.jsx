@@ -1,13 +1,12 @@
 import RecipeCard from "./RecipeCard";
-import { mockRecipes } from "../../../test-data/mockRecipe";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const RecipesPage = () => {
+const RecipesPage = ({ recipes, searchQuery}) => {
     const [selectedCategory, setSelectedCategory] = useState("");
     const navigate = useNavigate();
 
-    const filteredRecipes = mockRecipes.filter((recipe) => {
+    const filteredRecipes = recipes.filter((recipe) => {
     const matchesSearch = recipe.name
       .toLowerCase()
       .includes(searchQuery.toLowerCase());
