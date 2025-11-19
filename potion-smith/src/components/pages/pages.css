@@ -8,6 +8,7 @@
     scroll-snap-type: x mandatory;
     padding: 1rem 0;
     scroll-behavior: smooth;   /* smooth scrolling on swipe */
+    scrollbar-width: none;
 }
 
 /* Make each slide “lock” into place */
@@ -33,6 +34,12 @@
     scroll-snap-align: center;
     transition: transform 0.3s ease;
     flex-shrink: 0;             /* prevent shrinking in flex container */
+}
+
+.carousel-item {
+  min-width: 250px;
+  scroll-snap-align: start;
+  text-align: center;
 }
 
 /* Hover effect */

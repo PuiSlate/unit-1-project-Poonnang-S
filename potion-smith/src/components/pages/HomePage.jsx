@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useRef, useEffect } from "react";
 import { recipeImages } from "../../assets/images/images";
 
 const featuredRecipes = [
@@ -9,10 +10,32 @@ const featuredRecipes = [
 ];
 
 const HomePage = () => {
+    const carouselRef = useRef(null);
+
+    useEffect(() => {
+        const carousel = carouselRef.current;
+  if (!carousel) return;
+
+  //add a smooth scroll right by 1 item
+  let scrollInterval = setInterval(() => {
+    carousel.scrollBy({ left: 250, behavior: "smooth" });
+
+    //if at the end, jump back to the start
+    if (carousel.scrollLeft + carousel.offsetWidth >= carousel.scrollWidth - 5) {
+      setTimeout(() => {
+        carousel.scrollTo({ left: 0, behavior: "smooth" });
+      }, 600);
+    }
+  }, 2500);
+
+  return () => clearInterval(scrollInterval);
+}, []);
+
   return (
     <main>
+      <h1>Featured This Week</h1>
       <div className="homepage-carousel">
-        <h1>Featured This Week</h1>
+        
         {featuredRecipes.map((recipe) => (
           <Link key={recipe.id} to={`/recipes/${recipe.id}`} className="carousel-item">
             <img
