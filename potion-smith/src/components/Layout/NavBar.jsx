@@ -1,18 +1,16 @@
-import { useState } from "react";
 
-const NavBar = () => {
-  const [searchQuery, setSearchQuery] = useState("");
 
+const NavBar = ({ searchQuery, setSearchQuery }) => {
   const handleSearch = (e) => {
     e.preventDefault();
-    console.log("Searching for:", searchQuery);
   };
 
   return (
     <div className="navbar">
-       <div className="logo">
+      <div className="logo">
         <a href="/">Potion Smith</a>
-         </div>
+      </div>
+
       <ul className="navbar-links">
         <li><a href="/recipes">Recipes</a></li>
         <li><a href="/about">About</a></li>
