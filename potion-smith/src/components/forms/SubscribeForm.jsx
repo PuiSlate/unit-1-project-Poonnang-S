@@ -5,16 +5,22 @@ const SubscribeForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subscribe, setSubscribe] = useState(true);
+  const [message, setMessage] = useState("");
+  const [messageType, setMessageType] = useState("success");
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     // basic validation for local logic only
     if (!name || !email) {
-        alert("Please fill out all fields");
+       setMessageType("error");
+       setMessage("Please fill out all fields");
         return;
     }
+   //simulate submission
     console.log({ name, email, subscribe });
-    alert("Thank you for your subscription!");
+    setMessageType("success");
+    setMessage("Thank you for your subscription!");
 
     setName("");
     setEmail("");
@@ -52,6 +58,20 @@ const SubscribeForm = () => {
           handleChange={(e) => setSubscribe(e.target.checked)}
         />
       </div>
+      
+
+      {/* conditional rendering with ternary operator*/}
+      {message && (
+        <div
+          className={`message ${messageType === "error" ? "error" : "success"}`}
+          style={{
+            marginTop: "10px", textAlign: "center",
+            color: messageType === "error" ? "red" : "green",
+          }}
+        >
+          {message}
+        </div>
+      )}
 
       <div className="container">
         <input type="submit" value="Subscribe" />
