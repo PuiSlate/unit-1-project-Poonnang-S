@@ -1,49 +1,57 @@
 import RecipeCard from "./RecipeCard";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useMemo } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
-const RecipesPage = ({ recipes, searchQuery}) => {
-    const [selectedCategory, setSelectedCategory] = useState("");
-    const navigate = useNavigate();
+const RecipesPage = ({ recipes }) => {
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const navigate = useNavigate();
+  const location = useLocation();
 
-    const filteredRecipes = recipes.filter((recipe) => {
-    const matchesSearch = recipe.name
-      .toLowerCase()
-      .includes(searchQuery.toLowerCase());
+  // Read search query from URL
+  const queryParams = new URLSearchParams(location.search);
+  const searchQuery = queryParams.get("search")?.toLowerCase() || "";
 
-    const matchesCategory =
-      selectedCategory === "" || recipe.category === selectedCategory;
+  // Filtering recipes by search (name or category) and selectedCategory
+  const filteredRecipes = useMemo(() => {
+    return recipes.filter((recipe) => {
+      const matchesSearch =
+        recipe.name.toLowerCase().includes(searchQuery) ||
+        recipe.category.toLowerCase().includes(searchQuery);
 
-    return matchesSearch && matchesCategory;
-  });
+      const matchesCategory =
+        selectedCategory === "" || recipe.category === selectedCategory;
 
-    return (
-        <main className="recipes-page">
-            <h1>All Recipes</h1>
+      return matchesSearch && matchesCategory;
+    });
+  }, [recipes, searchQuery, selectedCategory]);
 
-            <select
-             value={selectedCategory}
-             onChange={(e) => setSelectedCategory(e.target.value)}
-           >
-             <option value="">All Categories</option>
-             <option value="Gin">Gin</option>
-             <option value="Tequila">Tequila</option>
-             <option value="Rum">Rum</option>
-             <option value="Vodka">Vodka</option>
-             <option value="Mocktail">Mocktail</option>
-             </select>
+  return (
+    <main className="recipes-page">
+      <h1>All Recipes</h1>
 
-            <div className="recipes-grid">
-                {filteredRecipes.map((recipe) => (
-                    <RecipeCard 
-                        key={recipe.id} 
-                        recipe={recipe}
-                        onClick={() => navigate(`/recipes/${recipe.id}`)}
-                    />
-                ))}
-            </div>
-        </main>
-    );
+      <select
+        value={selectedCategory}
+        onChange={(e) => setSelectedCategory(e.target.value)}
+      >
+        <option value="">All Categories</option>
+        <option value="Gin">Gin</option>
+        <option value="Tequila">Tequila</option>
+        <option value="Rum">Rum</option>
+        <option value="Vodka">Vodka</option>
+        <option value="Mocktail">Mocktail</option>
+      </select>
+
+      <div className="recipes-grid">
+        {filteredRecipes.map((recipe) => (
+          <RecipeCard
+            key={recipe.id}
+            recipe={recipe}
+            onClick={() => navigate(`/recipes/${recipe.id}`)}
+          />
+        ))}
+      </div>
+    </main>
+  );
 };
 
 export default RecipesPage;
