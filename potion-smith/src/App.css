@@ -16,12 +16,16 @@ body {
 
 h1 {
     color: black;
-    text-align: left;
+    text-align: center;
     font-family: "Smythe", system-ui;
     text-transform: uppercase;
     font-size: 4rem;        /* fixed typo: "6 rem" -> "6rem" */
     font-weight: 900;
     margin: 1rem 0;
+}
+
+h2 {
+    text-align: center
 }
 
 h1,
@@ -39,6 +43,7 @@ p {
     margin: 6px 0;
     line-height: 1.6;
     padding: 15px;
+    text-align: justify;
 }
 
 strong {
