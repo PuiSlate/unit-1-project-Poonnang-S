@@ -86,7 +86,7 @@
 
 #contact-icons {
     display: grid;
-    justify-items: left;
+    justify-items: center;
     grid-template-rows: auto;
     grid-template-columns: auto;
     grid-template-areas:

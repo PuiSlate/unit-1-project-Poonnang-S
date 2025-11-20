@@ -12,7 +12,8 @@ function AgeGate({ onVerified }) {
   };
 
   return (
-    <div className="age-gate">
+    <div className="age-gate"
+    style={{ color:"#ffffff", textAlign: "center", fontFamily: "'Smythe', system-ui" }}>
       {!denied ? (
         <>
           <h1>Welcome to Potion Smith</h1>

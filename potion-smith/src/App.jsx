@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Routes, Route, Navigate } from 'react-router';
 import Header from './components/Layout/Header'
 import Footer from './components/Layout/Footer'
@@ -9,15 +9,24 @@ import HomePage from './components/pages/HomePage'
 import AboutPage from './components/pages/AboutPage'
 import SubscribePage from './components/pages/SubscribePage'
 import ContactPage from './components/pages/ContactPage'
-
-
+import AgeGate from './components/forms/AgeGate';
 
 
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
   const [recipes, setRecipes] = useState(mockRecipes);
+  const [ageVerified, setAgeVerified] = useState(false);
 
+  // AgeGate modal to appear before users access the homepage
+  const handleAgeVerified = (verified) => {
+    setAgeVerified(verified);
+  };
+  // If not verified, show the AgeGate first
+  if (!ageVerified) {
+    return <AgeGate onVerified={handleAgeVerified} />;
+  }
+  // Once verified, render the normal app
   return (
     <>
       <Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
