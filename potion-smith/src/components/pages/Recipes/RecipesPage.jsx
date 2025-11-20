@@ -28,7 +28,9 @@ const RecipesPage = ({ recipes }) => {
   return (
     <main className="recipes-page">
       <h1>All Recipes</h1>
-
+      <p>Welcome, brave adventurer, to the Potion Smith’s recipe compendium! Here you’ll find enchanted cocktails, 
+      mystical mocktails, and legendary elixirs worthy of any dungeon master’s table. Mix your ingredients wisely,
+    roll for flavor, and don’t forget to save your favorites before they vanish like a disappearing spell!</p>
       <select
         value={selectedCategory}
         onChange={(e) => setSelectedCategory(e.target.value)}

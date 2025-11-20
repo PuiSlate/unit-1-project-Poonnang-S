@@ -17,7 +17,7 @@ function AgeGate({ onVerified }) {
       {!denied ? (
         <>
           <h1>Welcome to Potion Smith</h1>
-          <p>Are you 21 or older?</p>
+          <h3>Are you 21 or older?</h3>
           <div className="age-buttons">
             <button onClick={handleYes}>Yes</button>
             <button onClick={handleNo}>No</button>
