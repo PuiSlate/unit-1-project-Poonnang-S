@@ -9,6 +9,7 @@
     padding: 1rem 0;
     scroll-behavior: smooth;   /* smooth scrolling on swipe */
     scrollbar-width: none;
+    white-space: nowrap;
 }
 
 /* Make each slide “lock” into place */

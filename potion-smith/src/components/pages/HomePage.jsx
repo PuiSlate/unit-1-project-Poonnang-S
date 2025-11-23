@@ -6,7 +6,8 @@ const featuredRecipes = [
   { id: 8, name: "Ranger's Feral Senses", imageID: "rangers-feral-senses.jpg" },
   { id: 4, name: "The Hellfire Draught Margarita", imageID: "hellfire-draught-margarita.jpg" },
   { id: 2, name: "Bard's Song of Rest", imageID: "bard-song-of-rest.jpg" },
-  { id: 6, name: "The Balder's Gate Gourd", imageID: "the-balders-gate-gourd.jpg" }
+  { id: 1, name: "Klauth's Spell", imageID: "klauths-spell.jpg" },
+  { id: 7, name: "Neverwinter Goblin's Grog", imageID: "never-winter-goblin-grog.jpg"}
 ];
 
 const HomePage = () => {
@@ -34,7 +35,7 @@ const HomePage = () => {
   return (
     <main>
       <h1>Featured This Week</h1>
-      <div className="homepage-carousel">
+      <div className="homepage-carousel" ref={carouselRef}>
         
         {featuredRecipes.map((recipe) => (
           <Link key={recipe.id} to={`/recipes/${recipe.id}`} className="carousel-item">

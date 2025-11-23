@@ -1,13 +1,35 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
-const NavBar = ({ searchQuery, setSearchQuery }) => {
+const NavBar = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
-  // Handle search form submission
+   // Read search text directly from URL
+  const params = new URLSearchParams(location.search);
+  const searchQuery = params.get("search") || "";
+
   const handleSearch = (e) => {
     e.preventDefault();
-    // Navigate to /recipes with query as URL param
-    navigate(`/recipes?search=${encodeURIComponent(searchQuery)}`);
+
+    // If search is empty, remove the param instead of leaving "?search="
+    if (searchQuery.trim() === "") {
+      params.delete("search");
+    } else {
+      params.set("search", searchQuery.trim());
+    }
+
+    navigate(`/recipes?${params.toString()}`);
+  };
+
+  const handleChange = (e) => {
+    const value = e.target.value;
+    const newParams = new URLSearchParams(location.search);
+
+    if (value === "") newParams.delete("search");
+    else newParams.set("search", value);
+
+    // Update the URL as the user types
+    navigate(`/recipes?${newParams.toString()}`, { replace: true });
   };
 
   return (
@@ -28,7 +50,7 @@ const NavBar = ({ searchQuery, setSearchQuery }) => {
           type="text"
           placeholder="Search recipes…"
           value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
+          onChange={handleChange}
           className="search-input"
         />
         <button type="submit" className="search-button" aria-label="Search">
