@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Input from "./input/Input";
+import Button from "./input/Button";
 
 const SubscribeForm = () => {
   const [name, setName] = useState("");
@@ -74,7 +75,12 @@ const SubscribeForm = () => {
       )}
 
       <div className="container">
-        <input type="submit" value="Subscribe" />
+       <Button
+         id="subscribe"
+         type="submit"
+         label="Subscribe"
+         classes="subscribe-btn"
+       />
       </div>
     </form>
   );

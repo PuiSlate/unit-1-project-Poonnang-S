@@ -1,5 +1,5 @@
 import RecipeCard from "./RecipeCard";
-import { useState, useMemo } from "react";
+import { useMemo } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const RecipesPage = ({ recipes }) => {
