@@ -1,3 +1,4 @@
+import Spacer from "../common/spacer";
 import SubscribeForm from "../forms/SubscribeForm";
 
 const SubscribePage = () => {
@@ -9,6 +10,7 @@ const SubscribePage = () => {
             </div>
 
             <SubscribeForm />
+           
         </main>
         
     )

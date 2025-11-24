@@ -19,7 +19,7 @@ function AgeGate({ onVerified }) {
     >
       {!denied ? (
         <>
-          <h1>Welcome to Potion Smith</h1>
+          <h2>Welcome to Potion Smith!</h2>
           <h3>Are you 21 or older?</h3>
 
           <div className="age-buttons">
