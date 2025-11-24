@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const Input = ({ id, label, type = "text", value, handleChange, placeholder, required, checked }) => {
   return (

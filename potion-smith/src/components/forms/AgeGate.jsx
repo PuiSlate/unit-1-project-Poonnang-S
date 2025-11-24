@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "./input/Button";
 
 function AgeGate({ onVerified }) {
   const [denied, setDenied] = useState(false);
@@ -19,8 +20,21 @@ function AgeGate({ onVerified }) {
           <h1>Welcome to Potion Smith</h1>
           <h3>Are you 21 or older?</h3>
           <div className="age-buttons">
-            <button onClick={handleYes}>Yes</button>
-            <button onClick={handleNo}>No</button>
+            <Button
+             id="age-yes"
+             type="button"
+             label="Yes"
+             classes="age-btn yes-btn"
+            handleClick={handleYes}
+        />
+
+            <Button
+            id="age-no"
+            type="button"
+            label="No"
+            classes="age-btn no-btn"
+            handleClick={handleNo}
+            />
           </div>
         </>
       ) : (
