@@ -15,7 +15,7 @@
   margin-top: 1rem;
 }
 
-.age-buttons button {
+.age-btn {
   background-color: white;
   color: #630111;
   border: none;
@@ -26,7 +26,7 @@
   transition: background 0.3s ease;
 }
 
-.age-buttons button:hover {
+.age-btn:hover {
   background-color: #ffb3b3;
 }
 
@@ -77,8 +77,8 @@ input::placeholder {
   height: auto;
 }
 
-/* Submit button styling */
-input[type="submit"] {
+/* Subscribe button styling */
+.subscribe-btn {
   background-color: #630111;
   color: white;
   border: none;
@@ -90,7 +90,7 @@ input[type="submit"] {
   transition: background 0.3s ease;
 }
 
-input[type="submit"]:hover {
+.subscribe-btn:hover {
   background-color: #ff4d4d;
 }
 

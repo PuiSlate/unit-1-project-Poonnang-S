@@ -13,27 +13,30 @@ function AgeGate({ onVerified }) {
   };
 
   return (
-    <div className="age-gate"
-    style={{ color:"#ffffff", textAlign: "center", fontFamily: "'Smythe', system-ui" }}>
+    <div
+      className="age-gate"
+      style={{ color: "#ffffff", textAlign: "center", fontFamily: "'Smythe', system-ui" }}
+    >
       {!denied ? (
         <>
           <h1>Welcome to Potion Smith</h1>
           <h3>Are you 21 or older?</h3>
+
           <div className="age-buttons">
             <Button
-             id="age-yes"
-             type="button"
-             label="Yes"
-             classes="age-btn yes-btn"
-            handleClick={handleYes}
-        />
+              id="age-yes"
+              type="button"
+              label="Yes"
+              classes="age-btn yes-btn"
+              handleClick={handleYes}
+            />
 
             <Button
-            id="age-no"
-            type="button"
-            label="No"
-            classes="age-btn no-btn"
-            handleClick={handleNo}
+              id="age-no"
+              type="button"
+              label="No"
+              classes="age-btn no-btn"
+              handleClick={handleNo}
             />
           </div>
         </>
