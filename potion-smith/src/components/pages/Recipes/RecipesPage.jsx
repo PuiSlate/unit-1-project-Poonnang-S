@@ -22,7 +22,8 @@ const RecipesPage = ({ recipes }) => {
       const matchesCategory =
         selectedCategory === "" || recipe.category === selectedCategory;
 
-      // CASE 1: neither filter selected → show all
+     //Test casess for filtering logic
+      // CASE 1: neither filter selected, show all
     if (searchQuery === "" && selectedCategory === "") {
       return true;
     }
@@ -37,10 +38,10 @@ const RecipesPage = ({ recipes }) => {
       return matchesCategory;
     }
 
-    // CASE 4: BOTH filters → require BOTH to match
+    // CASE 4: BOTH filters, require BOTH to match
     return matchesSearch && matchesCategory;
   });
-  
+
   }, [recipes, searchQuery, selectedCategory]);
 
   return (
