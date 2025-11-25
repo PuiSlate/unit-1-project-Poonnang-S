@@ -1,5 +1,7 @@
 
 import { Link } from "react-router-dom";
+import aboutPageImg from "../../assets/images/potion-smith-about-page.jpg"
+
 
 const AboutPage = () => {
     return (
@@ -15,7 +17,7 @@ const AboutPage = () => {
             art of potioncraft begins here.
             </p>
             </div>
-            <img src="src/assets/images/potion-smith-about-page.png" width="100%" alt="Potion Smith About" />
+            <img src={ aboutPageImg } width="100%" alt="Potion Smith About" />
         </main>
     )
 }

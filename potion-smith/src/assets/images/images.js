@@ -8,7 +8,7 @@ import neverWinterGoblinGrog from "./never-winter-goblin-grog.jpg"
 import theBaldersGateGourd from "./the-balders-gate-gourd.jpg"
 import theHighForestFey from "./the-high-forest-fey-elixir.jpg"
 import theLuskanPirates from "./the-luskan-pirates-pine.jpg"
-import aboutPageImg from "./whisky-8443152_1280.jpg"
+import aboutPageImg from "./potion-smith-about-page.jpg"
 
 export const recipeImages = {
 "klauths-spell.jpg" : klauthsSpell,
@@ -25,5 +25,5 @@ export const recipeImages = {
 }
 
 export const publicImage = {
-    "whisky-8443152_1280.jpg" : aboutPageImg
+    "potion-smith-about-page.jpg" : aboutPageImg
 }
